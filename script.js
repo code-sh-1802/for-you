@@ -1,13 +1,5 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function () {
-  // Mobile menu toggling
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const navLinks = document.querySelector('.nav-links');
-
-  mobileMenu.addEventListener('click', function () {
-    navLinks.classList.toggle('nav-active');
-  });
-
   // Heart Animation Generation
   function createHeart() {
     const heart = document.createElement('div');
