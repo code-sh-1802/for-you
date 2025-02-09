@@ -1,41 +1,204 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+/* style.css */
+
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background: linear-gradient(to bottom right, #E3FDFD, #FFD3E0);
-    color: #333;
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #333;
 }
 
-.container {
-    max-width: 600px;
-    margin: auto;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(255, 0, 100, 0.2);
-    backdrop-filter: blur(15px);
+/* Header & Navigation */
+header {
+  background: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
 }
 
-h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 50px;
-    color: #FF6699;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-family: 'Great Vibes', cursive;
+  color: #e91e63;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e91e63;
+}
+
+.mobile-menu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+    url('https://via.placeholder.com/800x600?text=Valentine+Day') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    font-size: 20px;
-    color: white;
-    background: #FF6699;
-    border-radius: 50px;
-    cursor: pointer;
+  padding: 10px 20px;
+  background: #e91e63;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-.timeline .event {
-    background: rgba(255, 255, 255, 0.3);
-    padding: 10px;
+.btn:hover {
+  background: #d81b60;
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.story, .gifts {
+  text-align: center;
+}
+
+.story h1, .gifts h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #e91e63;
+}
+
+.story p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Gift Cards */
+.gift-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: left;
+}
+
+.card-content h2 {
+  font-size: 1.5rem;
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f8f8f8;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 150px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .nav-links li {
     margin: 10px 0;
-    border-radius: 10px;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Toggle class for mobile nav */
+.nav-active {
+  display: flex !important;
 }
