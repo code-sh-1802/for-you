@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Gift for You</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        <li><a href="gifts.html">Gifts</a></li>
+        <li><a href="fun.html">Fun</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="gifts">
+      <h2>Your Special Gift</h2>
+      <div class="gift-card">
+        <p class="gift-message">Surprise! You've earned a special treat!</p>
+        <p class="gift-code">
+          Use code <span id="giftCode">LOVE2025</span> for a discount on your favorite treat!
+        </p>
+      </div>
+      <button id="revealGift">Reveal More!</button>
+      <div id="extraGift" class="hidden">
+        <p>
+          And here's another surprise: a coupon for a homemade dinner date! I can't wait to cook for you.
+        </p>
+      </div>
+    </section>
+  </main>
+  <div id="hearts-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
